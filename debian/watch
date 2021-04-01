@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/^([0-9.]+)(.*)$/$1~$2/" \
+http://sf.net/aqualung/aqualung-(.*).tar.gz

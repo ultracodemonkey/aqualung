@@ -1,0 +1,27 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 004_missing-library.dpatch by Ilya Barygin <barygin@gmail.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: New patch generated from aqualung 0.9~beta11-1ubuntu7 diff.gz
+
+@DPATCH@
+
+--- aqualung-0.9~beta11.orig/src/Makefile.am
++++ aqualung-0.9~beta11/src/Makefile.am
+@@ -46,3 +46,5 @@
+ utils_gui.c utils_gui.h \
+ version.h \
+ volume.c volume.h
++
++aqualung_LDADD = -ldl
+--- aqualung-0.9~beta11.orig/src/Makefile.in
++++ aqualung-0.9~beta11/src/Makefile.in
+@@ -60,7 +60,7 @@
+ 	trashlist.$(OBJEXT) utils.$(OBJEXT) utils_gui.$(OBJEXT) \
+ 	volume.$(OBJEXT)
+ aqualung_OBJECTS = $(am_aqualung_OBJECTS)
+-aqualung_LDADD = $(LDADD)
++aqualung_LDADD = $(LDADD) -ldl
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles

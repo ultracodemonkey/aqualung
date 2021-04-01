@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 001-Fix-crash-fr-locale.dpatch by Julien Lavergne <gilir@ubuntu.com>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Fix crash with french locale (From upstream, revision 1136)
+
+@DPATCH@
+diff -urNad aqualung-0.9~beta11~/src/po/fr.po aqualung-0.9~beta11/src/po/fr.po
+--- aqualung-0.9~beta11~/src/po/fr.po	2010-01-31 18:06:16.000000000 +0100
++++ aqualung-0.9~beta11/src/po/fr.po	2010-05-24 21:20:28.364729368 +0200
+@@ -972,7 +972,7 @@
+ 
+ #, c-format
+ msgid "Position: %d%%"
+-msgstr "Position : %s%%"
++msgstr "Position : %d%%"
+ 
+ #, c-format
+ msgid "Mute"

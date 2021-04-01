@@ -1,0 +1,8 @@
+aqualung for Debian
+-------------------
+
+This package is compiled without Monkey's Audio Codec support.
+"libmac" is not free, so it won't be added until upstream changes terms of
+its license.
+
+ -- Adam Cécile (Le_Vert) <gandalf@le-vert.net>  Mon,  1 Jan 2007 22:08:02 +0100

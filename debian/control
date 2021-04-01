@@ -1,0 +1,50 @@
+Source: aqualung
+Section: sound
+Priority: extra
+Maintainer: Sam Watkins <sam@ucm.dev>
+Build-Depends: debhelper (>= 5), dpatch, autotools-dev,
+ libgtk2.0-dev (>= 2.6),
+ libxml2-dev,
+ libasound2-dev [linux-any] | libasound-dev [linux-any],
+ libjack-jackd2-dev,
+ libsamplerate0-dev | libsamplerate-dev,
+ libsndfile1-dev (>= 1.0.12) | libsndfile-dev (>= 1.0.12),
+ libflac-dev,
+ libvorbis-dev,
+ libmodplug-dev (>= 0.8),
+ libmpcdec-dev,
+ liboggz2-dev | liboggz-dev,
+ libspeex-dev,
+ libmad0-dev,
+ liblrdf0-dev (>= 0.4.0) | liblrdf-dev (>= 0.4.0),
+ libcddb2-dev | libcddb-dev (>= 1.2.1),
+ libusb-dev (>= 1.2.1),
+ libwavpack-dev (>= 4.40.0),
+ libavformat-dev (>= 4:0.7),
+ libcdio-paranoia-dev (>= 0.76),
+ imagemagick,
+ libpulse-dev,
+ liblua5.1-0-dev | liblua5.1-dev,
+ libmp3lame-dev
+Standards-Version: 3.8.4
+Homepage: http://aqualung.sourceforge.net/
+
+Package: aqualung
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Gapless Gtk-based audio player
+ Aqualung is a music player for the GNU/Linux operating system. It plays
+ audio files from your filesystem and has the feature of inserting no gaps
+ between adjacent tracks. It also supports high quality sample rate
+ conversion between the file and the output device, when necessary.
+ .
+ Almost all sample-based, uncompressed formats (e.g. WAV, AIFF, AU etc.) are
+ supported. Files encoded with FLAC (the Free Lossless Audio Codec), Ogg
+ Vorbis, Ogg Speex, MPEG Audio (including the infamous MP3 format) and MOD
+ audio formats (MOD, S3M, XM, IT, etc.), Musepack are also supported.
+ .
+ The program can play the music through OSS, ALSA or using the JACK Audio
+ Connection Kit.
+ .
+ Aqualung supports the LADSPA 1.1 plugin standard. You can use any suitable
+ plugin to enhance the music you are listening to.

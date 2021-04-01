@@ -1,0 +1,3 @@
+?package(aqualung): needs="X11" section="Applications/Sound" \
+  title="Aqualung" longtitle="Aqualung gapless audio player" \
+  command="/usr/bin/aqualung" icon="/usr/share/pixmaps/aqualung.xpm"
